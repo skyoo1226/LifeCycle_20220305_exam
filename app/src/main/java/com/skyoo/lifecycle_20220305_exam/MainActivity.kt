@@ -20,6 +20,17 @@ class MainActivity : AppCompatActivity() {
         Log.d("메인화면", "onResume이 실행 되었다.")
     }
 
+    override fun onPause() {
+        super.onPause()
+        Log.d("메인화면", "onPause가 실행 되었다.")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d("메인화면", "onDestroy 실행 됨")
+    }
+
+
     fun setupEvents() {
 
         btnMove.setOnClickListener {
